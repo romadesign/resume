@@ -79,10 +79,16 @@ docker run --rm \
 ```
 docker ps <- container collection
 docker stop 'dockername'
+docker stop $(docker ps -a -q)
+
 ```
 ```
 //generate key
 sail php artisan key:generate
 sail npm install 
 sail npm run dev
+```
+```
+sail mysql
+
 ```
