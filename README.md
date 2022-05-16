@@ -62,4 +62,27 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# resume
+
+# To run the cloned repository, follow the steps below
+https://laravel.com/docs/8.x/sail#installing-composer-dependencies-for-existing-projects
+
+``` 
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/opt \
+    -w /opt \
+    laravelsail/php80-composer:latest \
+    composer install --ignore-platform-reqs
+```
+
+# Other options:
+```
+docker ps <- container collection
+docker stop 'dockername'
+```
+```
+//generate key
+sail php artisan key:generate
+sail npm install 
+sail npm run dev
+```
